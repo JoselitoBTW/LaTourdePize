@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Tour De Pize</title>
+
+    <!--Fichier css-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"
+        integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+        crossorigin="" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--Fin fichier css-->
+</head>
+
+<body>
+    <div class="background">
+        <!-- HEADER -->
+        <div id="container-fluid header">
+            <div class="row" id="header">
+                <!-- HEADER image du title -->
+                <div class="col-12" id="header-logo">
+                    <img src="images/accessoires/Bannière.png" class="img-responsive" alt="Logo La Tour de Pize">
+                </div>
+
+            </div>
+            <div>
+                <div class="header-menu">
+                    <ul class="nav nav-pills mb-3 nav-justified" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                                aria-selected="false">
+                                <i class="fas fa-home"></i>
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                                aria-selected="false">
+                                <i class="fas fa-hamburger"></i>
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+                                aria-selected="false">
+                                <i class="fas fa-phone"></i>
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+
+                            <!--Home-->
+
+                            <div class="home-image">
+                                <img src="images/resized/pizza_resized.png" class="img-responsive" alt="image pizza">
+                            </div>
+                            <div class="home-text">
+                                <p>
+                                    Nous sommes un restaurant rapide situé sur la zone commerciale de Choisey, nous
+                                    avons une
+                                    salle intérieure, une terrasse et une aire de jeux enfants.
+                                </p>
+                            </div>
+
+                            <div class="home-image">
+                                <img src="images/resized/dough_resized.png" class="img-responsive"
+                                    alt="image petrir la farine">
+                            </div>
+
+                            <div class="home-text">
+                                <p>
+                                    Nous vous proposons des pizzas, des burgers, des tacos, des paninis et des salades.
+                                    Nous
+                                    fabriquons notre pâte à pizza, nos pains burgers et nos pain kebab.
+                                    Tous nos desserts sont réalisés par nos soins.
+                                </p>
+                            </div>
+                            <!-- Fin Home -->
+
+                            <!-- FOOTER -->
+                            <div class="footer-text">
+                                <p>
+                                    BON APPETIT!
+                                </p>
+                            </div>
+
+                            <div class="footer-home">
+
+                                <div class="footer-icons">
+                                    <a href="#" class="fas fa-envelope-square"></a>
+                                    <a href="https://www.facebook.com/latourdepize/" target="_blanc"
+                                        class="fab fa-facebook-square"></a>
+                                </div>
+
+                                <div class="footer-image">
+                                    <img src="images/accessoires/truc frites.png" class="img-responsive"
+                                        alt="image footer. Boite de frites">
+                                </div>
+
+                                <p class="footer-copyright">
+                                    @Copyright La Tour De Pize 2021
+                                </p>
+
+                            </div>
+                            <!--Fin Footer-->
+
+                            <!--Menu-->
+
+                        </div>
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                            aria-labelledby="pills-profile-tab">
+                            <div class="container-fluid burger">
+                                <div class="row mt-2 order">
+                                    <div class="col-6 ">
+                                        <img src="images/images.real/menuA.png" class="img-responsive" alt="Image-Menu">
+                                    </div>
+                                    <div class="col-6">
+                                        <h3>MENUS</h3>
+                                    </div>
+                                </div>
+                                <div class="row mt-5 order">
+                                    <div class="col-6 ">
+                                        <img src="images/images.real/SaladesA.png" class="img-responsive"
+                                            alt="Image-Menu">
+                                    </div>
+                                    <div class="col-6">
+                                        <h3>SALADES</h3>
+                                    </div>
+                                </div>
+                                <div class="row mt-5 order">
+                                    <div class="col-6 ">
+                                        <img src="images/images.real/AssiettesA.png" class="img-responsive"
+                                            alt="Image-Menu">
+                                    </div>
+                                    <div class="col-6">
+                                        <h3>ASSIETTES</h3>
+                                    </div>
+                                </div>
+                                <div class="row mt-5 order">
+                                    <div class="col-6 ">
+                                        <img src="images/images.real/PizzasA.png" class="img-responsive"
+                                            alt="Image-Menu">
+                                    </div>
+                                    <div class="col-6">
+                                        <h3>PIZZAS</h3>
+                                    </div>
+                                </div>
+                                <div class="row mt-5 order">
+                                    <div class="col-6 ">
+                                        <img src="images/images.real/Kebab-tacosA.png" class="img-responsive"
+                                            alt="Image-Menu">
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <h3>TACOS &<br> KEBAB</h3>
+                                    </div>
+                                </div>
+                                <div class="row mt-5 order">
+                                    <div class="col-6 ">
+                                        <img src="images/images.real/BurgerA.png" class="img-responsive"
+                                            alt="Image-Menu">
+                                    </div>
+                                    <div class="col-6">
+                                        <h3>BURGERS</h3>
+                                    </div>
+                                </div>
+                                <div class="row mt-5 order">
+                                    <div class="col-6 ">
+                                        <img src="images/images.real/PaninisA.png" class="img-responsive"
+                                            alt="Image-Menu">
+                                    </div>
+                                    <div class="col-6">
+                                        <h3>PANINIS</h3>
+                                    </div>
+                                </div>
+                                <div class="row mt-5 order">
+                                    <div class="col-6 ">
+                                        <img src="images/images.real/Wraps et bagnats.png" class="img-responsive"
+                                            alt="Image-Menu">
+                                    </div>
+                                    <div class="col-6">
+                                        <h3>WRAPS &<br> BAGNATS</h3>
+                                    </div>
+                                </div>
+                                <div class="row mt-5 order">
+                                    <div class="col-6 ">
+                                        <img src="images/images.real/Petites-faimsA.png" class="img-responsive"
+                                            alt="Image-Menu">
+                                    </div>
+                                    <div class="col-6 text-center">
+                                        <h3>LES PETITES<br> FAIMS</h3>
+                                    </div>
+                                </div>
+                                <div class="row mt-5 order">
+                                    <div class="col-6 ">
+                                        <img src="images/images.real/DessertsA.png" class="img-responsive"
+                                            alt="Image-Menu">
+                                    </div>
+                                    <div class="col-6">
+                                        <h3>DESSERTS</h3>
+                                    </div>
+                                </div>
+                                <div class="row mt-5 order">
+                                    <div class="col-6 ">
+                                        <img src="images/images.real/BoissonsA.png" class="img-responsive"
+                                            alt="Image-Menu">
+                                    </div>
+                                    <div class="col-6">
+                                        <h3>BOISSONS</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footer-text">
+                                <p>
+                                    BON APPETIT!
+                                </p>
+                                <div class="cart">
+                                    <a href="#id01">
+                                        <div id="button">
+                                            <img src="images/accessoires/fixed.png" class="img-fluid" alt="">
+                                        </div>
+                                        <div id="id01" class="modal">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <header class="container-fluid">
+                                                        <a href="#" class="closebtn">×</a>
+                                                        <img src="images/accessoires/gwr.png" class="img-fluid">
+                                                        <div class="container">
+                                                            <div class="row align-items-center">
+                                                                <div class="col">
+                                                                    <svg width="35" height="35" viewBox="0 0 35 35"
+                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M32.0906 20.2536L34.9631 7.61476C35.1705 6.70221 34.4769 5.83322 33.5411 5.83322H9.6741L9.11714 3.11039C8.97835 2.43172 8.38116 1.94434 7.68839 1.94434H1.45833C0.652908 1.94434 0 2.59724 0 3.40267V4.37489C0 5.18032 0.652908 5.83322 1.45833 5.83322H5.7047L9.97324 26.7017C8.95204 27.289 8.26389 28.3901 8.26389 29.6527C8.26389 31.532 9.78736 33.0554 11.6667 33.0554C13.546 33.0554 15.0694 31.532 15.0694 29.6527C15.0694 28.7003 14.6777 27.8398 14.0472 27.2221H26.7861C26.1556 27.8398 25.7639 28.7003 25.7639 29.6527C25.7639 31.532 27.2874 33.0554 29.1667 33.0554C31.046 33.0554 32.5694 31.532 32.5694 29.6527C32.5694 28.3054 31.7863 27.1412 30.6506 26.5899L30.9858 25.1148C31.1932 24.2022 30.4996 23.3332 29.5638 23.3332H13.2536L12.8559 21.3888H30.6686C31.3495 21.3888 31.9397 20.9176 32.0906 20.2536Z"
+                                                                            fill="white" />
+                                                                    </svg>
+                                                                    <P>Article(s)</P>
+
+                                                                </div>
+                                                                <div class="col">
+                                                                    <svg width="35" height="35" viewBox="0 0 35 35"
+                                                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path
+                                                                            d="M27.8022 28.2847C27.7123 27.8315 27.2666 27.5415 26.8162 27.6443C26.0853 27.811 24.9416 28.0143 23.7109 28.0143C19.8306 28.0143 16.7431 25.6361 15.4079 22.173H23.1796C23.3659 22.173 23.5466 22.1096 23.6921 21.9932C23.8376 21.8768 23.9391 21.7144 23.9799 21.5326L24.4156 19.5939C24.5308 19.0811 24.1408 18.5938 23.6152 18.5938H14.4389C14.3562 17.6143 14.3422 16.6601 14.4482 15.7059H24.4692C24.6563 15.7059 24.8378 15.642 24.9836 15.5247C25.1293 15.4074 25.2306 15.2438 25.2706 15.061L25.7158 13.027C25.8277 12.5154 25.4382 12.0312 24.9144 12.0312H15.4618C16.8723 8.95569 19.7472 6.90225 23.5022 6.90225C24.4924 6.90225 25.4548 7.05605 26.0896 7.1856C26.5146 7.27228 26.9337 7.01483 27.0468 6.59613L27.8665 3.56316C27.991 3.10235 27.698 2.63238 27.229 2.54345C26.4016 2.38656 25.0681 2.1875 23.6274 2.1875C16.984 2.1875 11.6231 6.30629 9.6438 12.0312H7.38281C6.92979 12.0312 6.5625 12.3985 6.5625 12.8516V14.8856C6.5625 15.3386 6.92979 15.7059 7.38281 15.7059H8.85726C8.78828 16.6361 8.77652 17.7079 8.84488 18.5938H7.38281C6.92979 18.5938 6.5625 18.961 6.5625 19.4141V21.3527C6.5625 21.8058 6.92979 22.173 7.38281 22.173H9.44139C11.1521 28.3481 16.4927 32.8125 23.6274 32.8125C25.4253 32.8125 26.9471 32.5019 27.8042 32.2801C28.2258 32.1711 28.4897 31.7532 28.405 31.326L27.8022 28.2847Z"
+                                                                            fill="white" />
+                                                                    </svg>
+                                                                    <p>Prix</p>
+
+                                                                </div>
+                                                                <p>Résumé de votre commande:</p>
+                                                            </div>
+                                                        </div>
+                                                    </header>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+
+                            </div>
+
+                            <!--Fin Menu-->
+
+
+                            <!--Footer-->
+                            <div class="footer-home">
+
+                                <div class="footer-icons">
+                                    <a href="#" class="fas fa-envelope-square"></a>
+                                    <a href="https://www.facebook.com/latourdepize/" target="_blanc"
+                                        class="fab fa-facebook-square"></a>
+                                </div>
+
+                                <div class="footer-image">
+                                    <img src="images/accessoires/truc frites.png" class="img-responsive"
+                                        alt="image footer. Boite de frites">
+                                </div>
+
+                                <p class="footer-copyright">
+                                    @Copyright La Tour De Pize 2021
+                                </p>
+
+                            </div>
+
+                            <!--Fin Footer-->
+
+
+
+                            <!--Contact-->
+                        </div>
+                        <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                            aria-labelledby="pills-contact-tab">
+                            <div class="infocontact">
+                                <div id="horaire">
+                                    <p>La tour de Pize est ouverte du mardi au<br>samedi de 10h à 21h30 ainsi que le
+                                        dimanche<br>
+                                        de 18h à 21h30.</p>
+                                </div>
+                                <div class="rectangle"></div>
+                                <div id="telephone">
+                                    <a href="tel:03848277XX" style="color:#fff; text-decoration: none;">03 84 82 77
+                                        25</a>
+                                </div>
+                                <div class="rectangle"></div>
+                                <div id="social">
+                                    <a href="https://www.facebook.com/latourdepize/" target="_blanc"
+                                        style="color:#fff; text-decoration: none;">Suivez nous
+                                        également<br>sur Facebook</a>
+                                </div>
+                                <div id="map">
+                                </div>
+                                <div class="adresse">
+                                    <p>1 RUE DU FOURNEY 39100 CHOISEY</p>
+                                </div>
+                                <!--Fin contact-->
+
+                                <!-- FOOTER -->
+                                <div class="footer-text">
+                                    <p>
+                                        BON APPETIT!
+                                    </p>
+                                </div>
+
+                                <div class="footer-home">
+
+                                    <div class="footer-icons">
+                                        <a href="#" class="fas fa-envelope-square"></a>
+                                        <a href="https://www.facebook.com/latourdepize/" target="_blanc"
+                                            class="fab fa-facebook-square"></a>
+                                    </div>
+
+                                    <div class="footer-image">
+                                        <img src="images/accessoires/truc frites.png" class="img-responsive"
+                                            alt="image footer. Boite de frites">
+                                    </div>
+
+                                    <p class="footer-copyright">
+                                        @Copyright La Tour De Pize 2021
+                                    </p>
+
+                                </div>
+                                <!-- FIN FOOTER -->
+                            </div>
+                        </div>
+                        <!--Fin Contact-->
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- FIN HEADER -->
+
+            <!--Fichier javascript-->
+
+            <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"
+                integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw=="
+                crossorigin=""></script>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                crossorigin="anonymous">
+            </script>
+            <script src="./javascript/script.js"></script>
+
+            <!--fin fichier javascript-->
+        </div>
+</body>
+
+</html>
